@@ -1,27 +1,79 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tic Tac Toe</title>
-    <link rel="stylesheet" href="style.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="img/tic-tac-toe-svgrepo-com.svg"
+    />
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
-</head>
-<body>
-    <div class="content">
-        <div class="title">Tic Tac Toe by Excel44M</div>
-        <div class="playerTurn">Player One's turn</div>
-        <div id="gameBoard">
-            <div class="cell" data-index="0"></div>
-            <div class="cell" data-index="1"></div>
-            <div class="cell" data-index="2"></div>
-            <div class="cell" data-index="3"></div>
-            <div class="cell" data-index="4"></div>
-            <div class="cell" data-index="5"></div>
-            <div class="cell" data-index="6"></div>
-            <div class="cell" data-index="7"></div>
-            <div class="cell" data-index="8"></div>
+  </head>
+  <body>
+    <header>
+      <h1 class="app-title">Tic Tac Toe</h1>
+      <span class="user-title">Excel44M @GitHub</span>
+    </header>
+    <main>
+      <div class="message-board">
+        <span id="message-text"></span>
+      </div>
+      <form class="form-board" id="form-board" name="form-board">
+        <div class="player-input">
+          <div class="player-one-input">
+            <label for="player-one-input"
+              ><span class="material-symbols-outlined"> close </span></label
+            >
+            <input
+              type="text"
+              class="input-name-player"
+              name="player-one-input"
+              id="player-one-input"
+              placeholder="Player 1"
+              required
+            />
+          </div>
+          <span class="versus">VS</span>
+          <div class="player-two-input">
+            <label for="player-two-input"
+              ><span class="material-symbols-outlined"> circle </span></label
+            >
+            <input
+              type="text"
+              class="input-name-player"
+              name="player-two-input"
+              id="player-two-input"
+              placeholder="Player 2"
+              required
+            />
+          </div>
         </div>
-        <div class="result"></div>
-    </div>
-</body>
+        <button class="button-submit" id="button-submit" type="submit">
+          New Game
+        </button>
+      </form>
+      <div class="game-board" id="game-board">
+        <div class="game-square-container">
+          <div class="game-square-container">
+            <div class="game-square" data-position="0" data-symbol=""></div>
+            <div class="game-square" data-position="1" data-symbol=""></div>
+            <div class="game-square" data-position="2" data-symbol=""></div>
+            <div class="game-square" data-position="3" data-symbol=""></div>
+            <div class="game-square" data-position="4" data-symbol=""></div>
+            <div class="game-square" data-position="5" data-symbol=""></div>
+            <div class="game-square" data-position="6" data-symbol=""></div>
+            <div class="game-square" data-position="7" data-symbol=""></div>
+            <div class="game-square" data-position="8" data-symbol=""></div>
+          </div>
+        </div>
+        <button class="button-restart" id="button-restart">Restart</button>
+      </div>
+    </main>
+  </body>
 </html>
